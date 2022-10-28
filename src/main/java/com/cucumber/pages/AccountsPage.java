@@ -30,13 +30,12 @@ public class AccountsPage {
 	 
 	 public List<String> getAccountSectionList()
 	 {
-		 List<String> actualList=new ArrayList<String>();
+		 List<String> actualList=new ArrayList<>();
 		 
 		 List<WebElement> list = driver.findElements(accountSections);
 		 for(WebElement st: list)
 		 {
 			 String text = st.getText();
-			 System.out.println(text);
 			 actualList.add(text);
 		 }
 		 return actualList;

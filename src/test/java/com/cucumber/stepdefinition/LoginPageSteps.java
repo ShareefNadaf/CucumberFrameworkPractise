@@ -27,7 +27,7 @@ public class LoginPageSteps {
 	@Then("page title should be {string}")
 	public void page_title_should_be(String expectedCondition) {
 		
-		Assert.assertTrue(pageTitle.equals(expectedCondition));
+		Assert.assertEquals(pageTitle,expectedCondition);
 	}
 
 	@When("User enters username {string}")

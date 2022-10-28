@@ -8,7 +8,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class DriverFactory {
 	
-	public static ThreadLocal<WebDriver> threadLocal=new ThreadLocal<WebDriver>();
+	public static final ThreadLocal<WebDriver> threadLocal=new ThreadLocal<>();
 	
 	public WebDriver initDriver(String browser)
 	{
@@ -24,7 +24,7 @@ public class DriverFactory {
 		}
 		else
 		{
-			System.out.println( browser+ "is not a valid browser.Please enter a valid browser");
+			System.err.println( browser+ "is not a valid browser.Please enter a valid browser");
 		}
 		
 		getDriver().manage().window().maximize();

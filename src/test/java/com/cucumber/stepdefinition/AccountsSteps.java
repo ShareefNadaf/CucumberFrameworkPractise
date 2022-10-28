@@ -48,9 +48,9 @@ public class AccountsSteps {
 	}
 
 	@Then("Account section count should be {int}")
-	public void account_section_count_should_be(Integer expectedCount) {
+	public void account_section_count_should_be(int expectedCount) {
 		
-		Assert.assertTrue(accountPage.getAccountSectionCount()==expectedCount); 
+		Assert.assertEquals(accountPage.getAccountSectionCount(),expectedCount); 
 	}
 
 }
